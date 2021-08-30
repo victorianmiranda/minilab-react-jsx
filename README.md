@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# MINILAB | React - Treino de JSX
 
-## Available Scripts
+Neste minilab vamos exercitar as regras do JSX, a sintaxe modificada de Javascript usada pelo React.
 
-In the project directory, you can run:
+## Requerimentos
 
-### `yarn start`
+- Faça um fork deste repositório
+- Clone este repositório
+- Dentro da pasta do projeto, execute `npm install` em seu terminal para instalar todas as dependências
+- Execute `npm start` para abrir o projeto em seu navegador
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Instruções
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+O objetivo do exercício é obter um resultado semelhante à esse:
 
-### `yarn test`
+![](example.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Passo 1: Interpolação de variáveis
 
-### `yarn build`
+Vá até o arquivo `Greeting.js` e defina um componente que exiba o texto "Olá, `nome`", onde `nome` é uma variável que contém seu nome. Lembre-se das regras de interpolação de variáveis no JSX! Também não se esqueça de importar e invocar seu componente no arquivo `App.js`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Passo 2: Usando imagens no JSX
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Vá até o arquivo `Profile.js` e defina um componente para exibir um card de perfil de usuário, exibindo como foto de perfil a imagem no caminho `/assets/images/puppy.jpg`. Para te ajudar com o CSS, você pode usar o HTML pré-estilizado dos [cards](https://getbootstrap.com/docs/5.0/components/card/) do Bootstrap. Lembre-se, a forma de definir tags <img /> no JSX difere do HTML tradicional em relação ao atributo `src`!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Passo 3: Renderização de listas
 
-### `yarn eject`
+Vá até o arquivo `ToDoList.js` e defina um componente para exibir uma lista de tarefas. Sua lista deve usar a seguinte array para exibir o JSX:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```javascript
+const tasks = [
+  "Fazer compras",
+  "Renovar CNH",
+  "Pagar contas",
+  "Estudar React",
+  "Fazer Minilab",
+];
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Percorra cada elemento da array e retorne um pedaço de JSX para obter um resultado semelhante ao da imagem acima. Você pode usar o HTML pré-estilizado dos [list groups](https://getbootstrap.com/docs/5.0/components/list-group/) do Bootstrap para te auxiliar com o CSS.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Passo 4: Renderização condicional
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Vá até o arquivo `EmotionMeter.js` e defina um componente que exibe uma "carinha" feliz ou triste, dependendo do valor de uma variável. Defina uma variável `emotion` para guardar a emoção atual. Essa variável pode ter dois valores (strings): `"HAPPY"` e `"SAD"`. Caso o valor dela seja `"HAPPY"`, exiba uma carinha feliz. Caso seja `"SAD"`, exiba uma carinha triste. Você pode obter ícones de emojis no [Font Awesome](https://fontawesome.com/v5.15/icons?d=gallery&p=2) (a fonte dos ícones já foi importada no arquivo `public.html`).
 
-## Learn More
+## Entrega
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Quando terminar, copie e cole o link do seu repositório (basta copiar a URL atual do seu navegador) na unidade deste exercício no Student Portal (my.ironhack).
